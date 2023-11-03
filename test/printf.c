@@ -1,5 +1,5 @@
-// RUN: clang -target arm-linux-gnueabihf -march=v7m -mthumb -c %s -o %t.o
-// RUN: llvm-jitlink %s | Filecheck %s
+// RUN: clang -target arm-linux-gnueabihf -march=v7a -c %s -o %t.o
+// RUN: %llvm-jitlink %t.o | %FileCheck %s
 
 // CHECK: 42
 int printf(const char *fmt, ...);
