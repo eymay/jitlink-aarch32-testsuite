@@ -30,6 +30,3 @@ config.test_exec_root = os.path.join(config.my_src_root, "test")
 
 config.substitutions.append(('%llvm-jitlink',
     os.path.join(config.my_src_root, 'bin/llvm-jitlink')))
-
-config.substitutions.append(('%FileCheck',
-    os.path.join(config.my_src_root, 'bin/FileCheck')))
